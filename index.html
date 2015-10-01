@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="homepage">
+<!-- head -->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<link rel="icon" href="images/linkedretail_favicon.png" type="images/png">
+<title>Linked Retail</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<!-- body -->
+<body>
+	<!-- header -->
+	<div id="header-container"></div>
+
+	<!-- content -->
+	<div id="content">
+		<section id="section01">
+			<div class="bg-layer0" style="background-image:url('images/photos/lr-double-exp01-background.jpg')">
+			</div>
+			<div class="home_tagline container-fluid">
+				<div class="container">
+					<div class="row">
+						<h2>Technology has made it possible</h2>
+						<p>A multichannel achievement for you and an endless aisle experience for your customers</p>
+					</div>
+					<div class="row lr-flow">
+						<div class="col-md-3 col-sm-3" data-delay="0">
+							<div class="icon-group brand">
+								<div class="parent-icon" data-delay="0"><span>Brand</span></div>
+							</div>
+							<span class="line-connect" data-delay="0"></span>
+						</div>
+						<div class="col-md-3 col-sm-3" data-delay="1">
+							<div class="icon-group retail">
+								<div class="parent-icon" data-delay="1"><span>Retail</span></div>
+							</div>
+							<span class="line-connect" data-delay="1"></span>
+						</div>
+						<div class="col-md-3 col-sm-3" data-delay="2">
+							<div class="icon-group pos">
+								<div class="parent-icon" data-delay="2"><span>POS</span></div>
+								<div class="child-icon shop"><img src="images/graphics/shop-icon.png"></div>
+								<div class="child-icon customer"><img src="images/graphics/customer-icon.png"></div>
+							</div>
+							<span class="line-connect" data-delay="2"></span>
+						</div>
+						<div class="col-md-3 col-sm-3" data-delay="3">
+							<div class="icon-group web">
+								<div class="parent-icon" data-delay="3"><span>Web</span></div>
+							</div>
+						</div>
+						<script>
+							$(document).ready(function(){
+								$('.lr-flow').children('div').each(function(){
+									var thisElem = $(this);
+									var thisDelay = $(this).attr('data-delay');
+									setTimeout(function(){
+										thisElem.addClass('activated');
+									}, thisDelay*800);
+								});
+							});
+						</script>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="section02" style="background-color: #f5f5f5;">
+			<div class="home-statement container">
+				<h2>Our Client Commitment</h2>
+				<p>We focus on you, so you can focus on your customers</p>
+			</div>
+		</section>
+		<section id="section03" class="split-img-text">
+			<div class="container-fluid no-pad">
+				<div class="row no-marg">
+					<div class="col-md-6 text-col">
+						<div class="wrapper">
+							<img src="images/graphics/lr_b2c_icon.png">
+							<p>Whether you're seasoned pros or new to the online space; an integrated or siloed system; we've got the solutions and services that support your business</p>
+						</div>
+					</div>
+					<div class="col-md-6 bg-col" style="background-image:url('images/photos/online_shopping01.jpg'); background-position: 0% 25%;">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="section04" class="split-img-text left-bg-right-text">
+			<div class="container-fluid no-pad">
+				<div class="row no-marg">
+					<div class="col-md-6 text-col">
+						<div class="wrapper">
+							<img src="images/graphics/lr_b2b_icon.png">
+							<p>We take the data your brands provide you to the next level. No more data entry, seamless communication. We're the PIM-in-the-cloud solution you've been looking for</p>
+						</div>
+					</div>
+					<div class="col-md-6 bg-col" style="background-image:url('images/photos/business_warehouse01.jpg')">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="section05" class="split-img-text">
+			<div class="container-fluid no-pad">
+				<div class="row no-marg">
+					<div class="col-md-6 text-col">
+						<div class="wrapper">
+							<img src="images/graphics/lr_lr2u_icon.png">
+							<p>From design to development, hosting to support, SEO to consulting: We strategize with our clients on how to be success online. From the single store retailer to the 100+ chain</p>
+						</div>
+					</div>
+					<div class="col-md-6 bg-col" style="background-image:url('images/photos/holding_mobile02.jpg');background-position:50% 0%;">
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!-- footer -->
+	<div id="footer-container"></div>
+
+</body>
+
+</html> 

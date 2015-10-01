@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="clients">
+<!-- head -->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<link rel="icon" href="images/linkedretail_favicon.png" type="images/png">
+<title>Clients</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<!-- body -->
+<body>
+	<!-- header -->
+	<div id="header-container"></div>
+
+	<!-- content -->
+	<div id="content">
+		<section id="page-title" class="has-subtitle" style="background-image:url('images/photos/clients-header01.jpg')">
+			<div class="container">
+				<h1>Clients</h1>
+				<p>Our Most Valuable Asset</p>
+			</div>
+		</section>
+		<section class="tb-pad-default intro_text" style="background-color:#00AEEF;">
+			<div class="container">
+				<p style="color:white;">One of the biggest benefits of a partnership is the ability to learn from each other. Just as we provide the means for our clients to grow their businesses in new directions, their unique visions help us improve our products and sharpen our skills. We appreciate their trust and the value they bring to our own business.</p>
+				<p style="color:white;">We provide design and development services to our clients. We will even work with your own design team, internal or 3rd party. We're ready to partner with you, just let us know.</p>
+			</div>
+		</section>
+		<section class="tb-pad-default">
+			<div class="container">
+				<div class="clients-nav row">
+					<ul>
+
+					</ul>
+				</div>
+				<div class="row">
+				<div class="details col-md-4" style="margin-bottom:25px;">
+					<h3 class="detail_title"></h3>
+					<p class="detail_description"></p>
+					<span class="detail_tech"></span>
+				</div>
+				<div class="screen col-md-8" style="margin-bottom:25px;">
+					<img src="images/graphics/computer-screen.png" style="display:block;margin-left:auto; margin-right: auto;">
+					<!--
+					<div class="web_screen">
+						<img src="#">
+					</div> -->
+				</div>
+			</div>
+			</div>
+			<script>
+				$(document).ready(function(){
+					var clients = [
+					{
+						name: 'French Cuff Boutique', 
+						description: 'French Cuff Boutique was born in July 2008 from Kairy-tate Barkley’s dream of creating a style destination where fashion lovers can enjoy access to a multi-brand collection of timeless classics and of-the-moment looks, a chic and inviting ambiance, expert personal service, and a shopping experience truly worth repeating.', 
+						tech: 'Magento CE / Retail Pro V9', 
+						image:'images/web_screens/french_cuff.jpg'
+					},
+					{
+						name: 'Petticoat Fair', 
+						description: 'Petticoat Fair opened in 1964 on Guadalupe Street in Austin, TX. Owners Bob and Betty Andrews’ concept was to provide service to all women in need of intimate apparel.', 
+						tech: 'Magento CE and WordPress / Retail Pro V8 & V9', 
+						image:'images/web_screens/petticoat_fair.jpg'
+					},
+					{
+						name: 'Russell\'s Western Wear', 
+						description: 'Nobody does it better than Russell\'s Western Wear. For starters, we are Florida\'s largest Justin and Tony Lama boot dealer and we have over 10,000 boots in stock across four stores in Tampa, Brandon, Lakeland and Ocala, including Lucchese, Corral, Dan Post, Nocona and more.', 
+						tech: 'Magento CE / Retail Pro V9 / Vendor Connect', 
+						image:'images/web_screens/russells_western_wear.jpg'
+					},
+					{
+						name: 'Utah Skis/Ski\'N See', 
+						description: 'Discounts steep as the mountains. Selections deep as the snow.', 
+						tech: 'Magento CE / Retail Pro V9', 
+						image:'images/web_screens/utah_skis.jpg'
+					},
+					{
+						name: 'Tyler\'s', 
+						description: 'Our story began in 1978 in Tyler, Texas. Back then we were a single store specializing in tennis and running. Within a few years we were nationally recognized as one of the top 25 specialty running stores in the United States.', 
+						tech: 'Magento CE / Retail Pro V9', 
+						image:'images/web_screens/tylers.jpg'
+					},
+					{
+						name: 'Maker\'s Mark Shop', 
+						description: 'Online store for everything Maker\'s Mark. From personalized barrell heads to branded apparel.', 
+						tech: 'Magento CE / Retail Pro V9', 
+						image:'images/web_screens/makers_mark_shop.jpg'
+					},
+					]; //END ARRAY
+
+
+					// OUTPUT CLIENT ARRAY INTO LIST ITEM
+					for (var i=0; i<clients.length;i++) {
+						var test = 'this is an item';
+						var list_item = '<li><a href="javascript:void(0)" data-description="'+clients[i].description+'" data-tech="'+clients[i].tech+'" data-screen="'+clients[i].image+'" data-name="'+clients[i].name+'">'+clients[i].name+'</a></li>';
+						$('.clients-nav').children('ul').append(list_item);
+					}
+
+					// CLIENT ITEM CLICK EVENT
+					$('.clients-nav').find('a').click(function(event){
+						event.preventDefault();
+						var dataName = $(this).attr('data-name');
+						var dataDescrip = $(this).attr('data-description');
+						var dataTech = $(this).attr('data-tech');
+						var dataScreen = '<div class="web_screen"><img src="'+$(this).attr('data-screen')+'"></div>';
+
+						$('.screen').children('.web_screen').remove();
+						$('.screen').append(dataScreen)
+						$('.details').children('.detail_title').html(dataName);
+						$('.details').children('.detail_description').html(dataDescrip);
+						$('.details').children('.detail_tech').html(dataTech);
+						$(window).trigger('resize');
+					});
+
+					//SIMULATED SCREEN
+					$(window).resize(function(){
+						var screenW = $('.screen').children('.web_screen').width();
+						var newHeight = screenW*.6225;
+						$('.screen').children('.web_screen').css('height', newHeight);
+					});
+
+					// TRIGGER FIRST CLIENT ITEM CLICK
+					$('.clients-nav').find('li:first-child a').trigger('click');
+				});
+			</script>
+		</section>
+	</div>
+
+	<!-- footer -->
+	<div id="footer-container"></div>
+
+</body>
+
+</html> 

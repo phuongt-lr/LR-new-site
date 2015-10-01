@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="brands">
+<!-- head -->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<link rel="icon" href="images/linkedretail_favicon.png" type="images/png">
+<title>Brands</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<!-- body -->
+<body>
+	<!-- header -->
+	<div id="header-container"></div>
+
+	<!-- content -->
+	<div id="content">
+		<section id="page-title" style="background-image:url('images/photos/join-us-header01.jpg')">
+			<div class="container">
+				<h1>Brands</h1>
+			</div>
+		</section>
+		<section id="brands" class="tb-pad-default">
+			<div class="container-fluid">
+
+			</div>
+			<script>
+				var brand_logos = [
+					"511_tactivcal_logo.png",
+					"ariat_logo.png",
+					"carhartt_logo.png",
+					"carolinaboots_logo.png",
+					"chippewa_boots_logo.png",
+					"cinch_logo.png",
+					"coats_logo.png",
+					"cruel_girl_logo.png",
+					"cruel_logo.png",
+					"DanPost.png",
+					"double_h_logo.png",
+					"durango_logo.png",
+					"eagle_creek_logo.png",
+					"johndeere.png",
+					"johnny_ringo_logo.png",
+					"jordan_logo.png",
+					"justin-boots-logo.png",
+					"justin_workboots_logo.png",
+					"levi_logo.png",
+					"macphersons_logo.png",
+					"Marmot-Logo.png",
+					"mcrae-industrial.png",
+					"MFwestern_logo.png",
+					"miller_ranch_logo.png",
+					"Nike-Logo.png",
+					"nocona_boots_logo.png",
+					"patagonia-logo.png",
+					"reef.png",
+					"rod_partrick_logo.png",
+					"scully_logo.png",
+					"southern_thread_logo.png",
+					"the_north_face_logo.png",
+					"tony_lama_logo.png",
+					"walls_fr_logo.png",
+					"web_walls-logo.png",
+					"westminster_fibers_logo.png",
+					"wrangler_logo.png"
+				];
+				$(document).ready(function(){
+					for (var i=0;i<brand_logos.length;i++){
+						var logo_img = 'images/brands/'+brand_logos[i];
+						var logo_item = '<div class="brand_item" style="background-image:url('+logo_img+')"></div>';
+						$('#brands').children('.container-fluid').append(logo_item);
+					}
+
+					$(window).resize(function(){
+						var itemW = $('.brand_item').width();
+						$('.brand_item').css('height', itemW);
+					});
+					$(window).trigger('resize');
+				});
+			</script>
+		</section>
+	</div>
+
+	<!-- footer -->
+	<div id="footer-container"></div>
+
+</body>
+
+</html> 
