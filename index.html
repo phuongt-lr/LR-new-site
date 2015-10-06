@@ -61,13 +61,16 @@
 						</div>
 						<script>
 							$(document).ready(function(){
-								$('.lr-flow').children('div').each(function(){
-									var thisElem = $(this);
-									var thisDelay = $(this).attr('data-delay');
-									setTimeout(function(){
-										thisElem.addClass('activated');
-									}, thisDelay*800);
-								});
+								function animate(){
+									$('.lr-flow').children('div').each(function(){
+										var thisElem = $(this);
+										var thisDelay = $(this).attr('data-delay');
+										setTimeout(function(){
+											thisElem.addClass('activated');
+										}, thisDelay*800);
+									});
+								}
+								setTimeout(animate, 150);
 							});
 						</script>
 					</div>
