@@ -336,17 +336,21 @@ html.mm-opened .mm-page {
   text-align: center;
 }
 @media (max-width: 767px) {
+  .row.lr-flow > div {
+    max-width: 520px;
+    margin: 0 auto;
+  }
   .row.lr-flow > div:nth-child(odd) {
     text-align: left;
   }
   .row.lr-flow > div:nth-child(odd) .line-connect {
     left: 45px;
     right: auto;
-    -moz-transform: rotate(10deg);
-    -o-transform: rotate(10deg);
-    -ms-transform: rotate(10deg);
-    -webkit-transform: rotate(10deg);
-    transform: rotate(10deg);
+    -moz-transform: rotate(12deg);
+    -o-transform: rotate(12deg);
+    -ms-transform: rotate(12deg);
+    -webkit-transform: rotate(12deg);
+    transform: rotate(12deg);
     -moz-transform-origin: left center 0;
     -o-transform-origin: left center 0;
     -ms-transform-origin: left center 0;
@@ -359,11 +363,11 @@ html.mm-opened .mm-page {
   .row.lr-flow > div:nth-child(even) .line-connect {
     left: auto;
     right: 45px;
-    -moz-transform: rotate(-10deg);
-    -o-transform: rotate(-10deg);
-    -ms-transform: rotate(-10deg);
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg);
+    -moz-transform: rotate(-12deg);
+    -o-transform: rotate(-12deg);
+    -ms-transform: rotate(-12deg);
+    -webkit-transform: rotate(-12deg);
+    transform: rotate(-12deg);
     -moz-transform-origin: right center 0;
     -o-transform-origin: right center 0;
     -ms-transform-origin: right center 0;
@@ -373,11 +377,11 @@ html.mm-opened .mm-page {
 }
 @media (max-width: 767px) and (max-width: 600px) {
   .row.lr-flow > div:nth-child(odd) .line-connect {
-    -moz-transform: rotate(15deg);
-    -o-transform: rotate(15deg);
-    -ms-transform: rotate(15deg);
-    -webkit-transform: rotate(15deg);
-    transform: rotate(15deg);
+    -moz-transform: rotate(25deg);
+    -o-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
   }
 }
 @media (max-width: 767px) and (max-width: 400px) {
@@ -391,11 +395,11 @@ html.mm-opened .mm-page {
 }
 @media (max-width: 767px) and (max-width: 600px) {
   .row.lr-flow > div:nth-child(even) .line-connect {
-    -moz-transform: rotate(-15deg);
-    -o-transform: rotate(-15deg);
-    -ms-transform: rotate(-15deg);
-    -webkit-transform: rotate(-15deg);
-    transform: rotate(-15deg);
+    -moz-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg);
   }
 }
 @media (max-width: 767px) and (max-width: 400px) {
@@ -405,6 +409,11 @@ html.mm-opened .mm-page {
     -ms-transform: rotate(-27.5deg);
     -webkit-transform: rotate(-27.5deg);
     transform: rotate(-27.5deg);
+  }
+}
+@media (max-width: 600px) {
+  .row.lr-flow > div {
+    max-width: 320px;
   }
 }
 .row.lr-flow > div.activated .parent-icon {
@@ -466,6 +475,20 @@ html.mm-opened .mm-page {
   opacity: 1;
 }
 .row.lr-flow .icon-group.pos:hover .child-icon.customer {
+  right: -47px;
+  opacity: 1;
+}
+.row.lr-flow .icon-group.web .child-icon.online-shop {
+  left: 0;
+}
+.row.lr-flow .icon-group.web .child-icon.customer {
+  right: 0;
+}
+.row.lr-flow .icon-group.web:hover .child-icon.online-shop {
+  left: -47px;
+  opacity: 1;
+}
+.row.lr-flow .icon-group.web:hover .child-icon.customer {
   right: -47px;
   opacity: 1;
 }

@@ -60,86 +60,34 @@
 			</div>
 			<script>
 				$(document).ready(function(){
-					var clients = [
-					{
-						name: 'Lions Pride',
-						description: 'Penn State Clothing and Nittany Lions Merchandise Shipped from State College, PA ',
-						tech: 'Magento CE / Retail Pro V9',
-						image: 'images/web_screens/lions_pride.jpg'
-					},
-					{
-						name: 'Underground Clothing',
-						description: 'In the late 90’s, when great fashion brands were hard to find, fashion entrepreneurs needed a radically different way to bring Calgarians the labels they love. Underground longed for a simple way to share denim and clothing trends that were popular around the world. No other store offered as large a selection of popular fashion as Underground desired in an easy to find location.',
-						tech: 'Magento CE / Retail Pro V9',
-						image: 'images/web_screens/underground_clothing.jpg'
-					},
-					{
-						name: 'Geargut',
-						description: 'The Backpacker opened its doors in 1974 as Baton Rouge\'s 1st outdoor shop with it\'s philosophy of selection, service and quality. With the opening of our second store in Lafayette, the Backpacker has grown into Louisiana\'s premier outfitter offering the largest selection of outdoor gear, with our "Price Match Guarantee". As well as carrying everything for your travel and outdoor needs, our Baton Rouge location is home to the C.C. Lockwood Gallery.  We hope to see you in our stores!',
-						tech: 'Magento CE / Retail Pro V9',
-						image: 'images/web_screens/geargut.jpg'
-					},
-					{
-						name: 'French Cuff Boutique', 
-						description: 'French Cuff Boutique was born in July 2008 from Kairy-tate Barkley’s dream of creating a style destination where fashion lovers can enjoy access to a multi-brand collection of timeless classics and of-the-moment looks, a chic and inviting ambiance, expert personal service, and a shopping experience truly worth repeating.', 
-						tech: 'Magento CE / Retail Pro V9', 
-						image:'images/web_screens/french_cuff.jpg'
-					},
-					{
-						name: 'Petticoat Fair', 
-						description: 'Petticoat Fair opened in 1964 on Guadalupe Street in Austin, TX. Owners Bob and Betty Andrews’ concept was to provide service to all women in need of intimate apparel.', 
-						tech: 'Magento CE and WordPress / Retail Pro V8 & V9', 
-						image:'images/web_screens/petticoat_fair.jpg'
-					},
-					{
-						name: 'Russell\'s Western Wear', 
-						description: 'Nobody does it better than Russell\'s Western Wear. For starters, we are Florida\'s largest Justin and Tony Lama boot dealer and we have over 10,000 boots in stock across four stores in Tampa, Brandon, Lakeland and Ocala, including Lucchese, Corral, Dan Post, Nocona and more.', 
-						tech: 'Magento CE / Retail Pro V9 / Vendor Connect', 
-						image:'images/web_screens/russells_western_wear.jpg'
-					},
-					{
-						name: 'Utah Skis/Ski\'N See', 
-						description: 'Discounts steep as the mountains. Selections deep as the snow.', 
-						tech: 'Magento CE / Retail Pro V9', 
-						image:'images/web_screens/utah_skis.jpg'
-					},
-					{
-						name: 'Tyler\'s', 
-						description: 'Our story began in 1978 in Tyler, Texas. Back then we were a single store specializing in tennis and running. Within a few years we were nationally recognized as one of the top 25 specialty running stores in the United States.', 
-						tech: 'Magento CE / Retail Pro V9', 
-						image:'images/web_screens/tylers.jpg'
-					},
-					{
-						name: 'Maker\'s Mark Shop', 
-						description: 'Online store for everything Maker\'s Mark. From personalized barrell heads to branded apparel.', 
-						tech: 'Magento CE / Retail Pro V9', 
-						image:'images/web_screens/makers_mark_shop.jpg'
-					},
-					]; //END ARRAY
 
+					$.getJSON( "clients/clients.json", function( data ) {
+						$.each(data, function(idx, obj){
+							var client_name = obj["name"],
+								client_description = obj["description"],
+								client_tech = obj["tech"],
+								client_image = obj["image"];
+							
+							var list_item = '<li><a href="javascript:void(0)" data-description="'+client_description+'" data-tech="'+client_tech+'" data-screen="'+client_image+'" data-name="'+client_name+'">'+client_name+'</a></li>'; 
+							$('.clients-nav').children('ul').append(list_item);
+						});
+					}).done(function(){
+						$('.clients-nav').find('a').click(function(event){
+							event.preventDefault();
+							var dataName = $(this).attr('data-name');
+							var dataDescrip = $(this).attr('data-description');
+							var dataTech = $(this).attr('data-tech');
+							var dataScreen = '<div class="web_screen"><img src="'+$(this).attr('data-screen')+'"></div>';
 
-					// OUTPUT CLIENT ARRAY INTO LIST ITEM
-					for (var i=0; i<clients.length;i++) {
-						var test = 'this is an item';
-						var list_item = '<li><a href="javascript:void(0)" data-description="'+clients[i].description+'" data-tech="'+clients[i].tech+'" data-screen="'+clients[i].image+'" data-name="'+clients[i].name+'">'+clients[i].name+'</a></li>';
-						$('.clients-nav').children('ul').append(list_item);
-					}
-
-					// CLIENT ITEM CLICK EVENT
-					$('.clients-nav').find('a').click(function(event){
-						event.preventDefault();
-						var dataName = $(this).attr('data-name');
-						var dataDescrip = $(this).attr('data-description');
-						var dataTech = $(this).attr('data-tech');
-						var dataScreen = '<div class="web_screen"><img src="'+$(this).attr('data-screen')+'"></div>';
-
-						$('.screen').children('.web_screen').remove();
-						$('.screen').append(dataScreen)
-						$('.details').children('.detail_title').html(dataName);
-						$('.details').children('.detail_description').html(dataDescrip);
-						$('.details').children('.detail_tech').html(dataTech);
-						$(window).trigger('resize');
-					});
+							$('.screen').children('.web_screen').remove();
+							$('.screen').append(dataScreen)
+							$('.details').children('.detail_title').html(dataName);
+							$('.details').children('.detail_description').html(dataDescrip);
+							$('.details').children('.detail_tech').html(dataTech);
+							$(window).trigger('resize');
+						});
+						$('.clients-nav').find('li:first-child a').trigger('click');
+					})
 
 					//SIMULATED SCREEN
 					$(window).resize(function(){
@@ -148,8 +96,6 @@
 						$('.screen').children('.web_screen').css('height', newHeight);
 					});
 
-					// TRIGGER FIRST CLIENT ITEM CLICK
-					$('.clients-nav').find('li:first-child a').trigger('click');
 				});
 			</script>
 		</section>
