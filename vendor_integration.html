@@ -10,10 +10,12 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css">
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </head>
 
@@ -24,21 +26,102 @@
 
 	<!-- content -->
 	<div id="content">
-		<section id="page-title" style="background-image:url('images/photos/technology-header01.jpg')">
+		<section id="page-title" class="has-subtitle" style="background-image:url('images/photos/technology-header01.jpg')">
 			<div class="container">
 				<h1>Vendor Integration</h1>
+				<p>Vendor Connect - for Retailers & Suppliers</p>
+			</div>
+		</section>
+		<section class="tb-pad-default" style="background-color:#00aeef;">
+			<div class="container">
+				<div class="row intro_text" style="color: white;">
+					<div class="col-md-12">
+						<p>We partner with brands, hosting their catalog on our cloud servers so that retailers can get access to the latest products and images. Select which items you want, or all of them, and our solution will import those products directly into your POS/Inventory system. No data entry needed. Time saved. With this access, you can send purchase orders to your brands for store replenishment or drop shipping- in-store or online.</p>
+					</div>
+				</div>
 			</div>
 		</section>
 		<section>
 			<div class="container-fluid no-pad">
 				<div class="row no-marg">
 					<div class="col-md-6 text-col">
-						<p class="main-text">We partner with brands, hosting their catalog on our cloud servers so that retailers can get access to the latest products and images. Select which items you want, or all of them, and our solution will import those products directly into your POS/Inventory system. No data entry needed. Time saved. With this access, you can send purchase orders to your brands for store replenishment or drop shipping- in-store or online.</p>
+						<p class="focus-text">Every customer wants to find what they’re looking for every time they visit a store or go to website... and you make sure that happens with Vendor Connect.</p>
+						<div class="focus-image">
+							<img src="images/graphics/lr_b2b_icon.png">
+						</div>
 					</div>
 					<div class="col-md-6 bg-col" style="background-image:url('images/photos/tablet_warehouse.jpg')">
 					</div>
 				</div>
 			</div>
+		</section>
+		<section id="vc-details">
+			<div class="container-fluid no-pad">
+				<div class="row no-marg">
+					<div class="details-text col-md-6">
+						<p>With Vendor Connect, retailers and suppliers are collaborating to exchange real-time information like catalogs, inventory, and orders fast, saving time and increasing sales. Connect POS and eCommerce systems to suppliers electronically, eliminating manual data entry. Sell in-store, out-of-stock and catalog items with an Endless Aisle, then delight customers by drop-shipping right to their front door, just like online retailers.</p>
+						<p><strong>We currently support the following:</strong><br>Retail Pro V9, Retail Pro V8, Microsoft RMS 2.0, Conductiv MPOS+, Custom Integration Available</p>
+					</div>
+					<div class="details-list col-md-6">
+						<ul class="list-lines">
+							<li><span>empty</span></li>
+							<li><span>empty</span></li>
+							<li><span>empty</span></li>
+							<li><span>empty</span></li>
+							<li><span>empty</span></li>
+							<li><span>empty</span></li>
+						</ul>
+						<ul class="list-items">
+							<li><span>Never be out of stock</span></li>
+							<li><span>Greatly Reduce manual entry and associated errors</span></li>
+							<li><span>Real-time vendor data visibility</span></li>
+							<li><span>Error-Free Order Management</span></li>
+							<li><span>Accurate Replensishment</span></li>
+							<li><span>Effective Demand Planning</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="tb-pad-default" style="background-color: #00AEEF">
+			<div class="container">
+				<div id="vc-owl" class="owl carousel">
+					<div> 
+						<h4>ELECTRONIC CATALOGS - NO MORE MANUAL ENTRY</h4>
+						<p>Vendor Connect allows suppliers and retailers to publish and receive product catalogs electronically, eliminating the need to enter item data by hand, recovering hundreds or even thousands of wasted man-hours. Point and click to select items to carry in-store, on the website, or drop-ship right from the supplier. Put the right items on the shelf faster to sell more and keep inventory to a minimum.</p>
+					</div>
+					<div>
+						<h4>ELECTRONIC ORDERS - LEVEL THE PLAYING FIELD</h4>
+						<p>Vendor Connect will reduce time spent on creating and submitting purchase orders with paperwork and messy excel spreadsheets by up to 80 – 90%. Placing orders is now fast and easy and can be sent right from POS or ecommerce systems to any supplier for drop-shipping. Even the smallest retailers can now go electronic with their suppliers, saving big for everyone.</p>
+					</div>
+					<div>
+						<h4>ENDLESS AISLE - NEVER MISS A SALE</h4>
+						<p>It isn’t possible for retailers to carry every product in inventory that their suppliers offer, but they can still sell them with the Endless Aisle. Vendor Connect makes it possible for retailers to stock the ideal products for their local market, and never miss out on a sale for an item they don’t carry or that might be out of stock. Suppliers can now sell their entire catalog through every channel to increase brand loyalty and sales.</p>
+					</div>
+					<div>
+						<h4>COST BENEFITS – HUGE SAVINGS</h4>
+						<p>From eliminating wasted manual labor to increasing the speed products are put on the shelf and sold, Vendor Connect can help add 10% or more to the bottom line. Suppliers can increase product turns while reducing inventory and lowering support costs. Retailers can streamline product administration while improving sales and personalizing service. Contacts us to learn how Vendor Connect can benefit you.</p>
+					</div>
+				</div>
+			</div>
+			<script>
+				$(document).ready(function(){
+						$('#vc-owl').owlCarousel({
+							nav: true,
+							navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+							loop: true,
+							autoplay: false,
+							autoplayTimeout: 2500,
+							autoplayHoverPause: true,
+							responsiveClass: true,
+							responsive: {
+								0:{
+									items: 1
+								}
+							}
+						});
+					});
+			</script>
 		</section>
 	</div>
 

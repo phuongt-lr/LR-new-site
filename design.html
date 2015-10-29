@@ -10,10 +10,12 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css">
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </head>
 
@@ -29,13 +31,79 @@
 				<h1>Design & Development</h1>
 			</div>
 		</section>
-		<section class="tb-pad-default">
+		<section class="tb-pad-default" style="padding-bottom: 20px;background-color:#00aeef;">
 			<div class="container">
-				<div class="row intro_text" style="margin-bottom:25px;">
+				<div class="row intro_text" style="margin-bottom:25px; color: white;">
 					<div class="col-md-12">
-						<p>Many retailers are coming to understand that having an online presence is an important next step in their business. Whether it's a new website or an existing one, we've got a team of designers and developers that can help realize your online vision. We've got affordable all-in-one packages to get started and the expertise to take your site to the next level.</p>
+						<p>Many retailers are coming to understand that having an online presence is an important next step in their business. Whether it's a new website or an existing one, we have a team of designers and developers that can help realize your online vision or take your current website to the next level.</p>
 					</div>
 				</div>
+			</div>
+		</section>
+		<section class="services" style="margin-top: 40px; margin-bottom: 90px;">
+			<div class="container">
+				<div id="services-owl" class="owl carousel">
+					<div>
+						<span>Custom Design</span>
+					</div>
+					<div>
+						<span>Custom Extensions</span>
+					</div>
+					<div>
+						<span>Branding</span>
+					</div>
+					<div>
+						<span>Responsive Design</span>
+					</div>
+					<div>
+						<span>SEO</span>
+					</div>
+					<div>
+						<span>Mobile Apps (iOS / Android)</span>
+					</div>
+					<div>
+						<span style="background-image:url(images/graphics/html5.svg)"></span>
+					</div>
+					<div>
+						<span style="background-image:url(images/graphics/css3.svg)"></span>
+					</div>
+					<div>
+						<span style="background-image:url(images/graphics/jquery.svg); background-size: calc(90% - 20px) auto;"></span>
+					</div>
+					<div>
+						<span style="background-image:url(images/graphics/php.svg); background-size: calc(65% - 20px) auto;"></span>
+					</div>
+				</div>
+				<script>
+					$(document).ready(function(){
+						$('#services-owl').owlCarousel({
+							nav: true,
+							navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+							loop: true,
+							autoplay: true,
+							autoplayTimeout: 2500,
+							autoplayHoverPause: true,
+							responsiveClass: true,
+							responsive: {
+								0:{
+									items: 1
+								},
+								480:{
+									items: 2
+								},
+								768:{
+									items: 3
+								},
+								1025:{
+									items: 4
+								},
+								1200: {
+									items: 5
+								}
+							}
+						});
+					});
+				</script>
 			</div>
 		</section>
 		<section class="screens" style="padding-top:60px;">
