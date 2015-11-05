@@ -759,6 +759,11 @@ html.join-us .info-col .wrapper {
     float: right;
   }
 }
+@media (max-width: 767px) {
+  html.join-us .info-col #googleFormModal iframe {
+    height: 1650px;
+  }
+}
 /* brands */
 
 html.brands .brand_item {
@@ -1088,6 +1093,11 @@ html.design_develop .web_screens > div > img {
 }
 /* pos integration */
 
+@media (min-width: 768px) {
+  html.pos_integration .intro_text p {
+    font-size: 18px;
+  }
+}
 html.pos_integration .main-text {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1106,6 +1116,52 @@ html.pos_integration .bg-col {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+html.pos_integration #integration_infographic img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100%;
+}
+html.pos_integration #feature_tabs ul.nav-tabs {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: none;
+}
+html.pos_integration #feature_tabs ul.nav-tabs > li {
+  margin-bottom: 0;
+}
+html.pos_integration #feature_tabs ul.nav-tabs > li.active > a {
+  color: #333333;
+}
+html.pos_integration #feature_tabs ul.nav-tabs > li > a {
+  border: 1px solid white;
+  border-radius: 0;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+html.pos_integration #feature_tabs ul.nav-tabs > li > a:focus,
+html.pos_integration #feature_tabs ul.nav-tabs > li > a:hover {
+  color: #333333;
+}
+html.pos_integration #feature_tabs .tab-content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+html.pos_integration #feature_tabs .tab-content h3 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+html.pos_integration #feature_tabs .tab-content ul {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 768px;
+}
+html.pos_integration #feature_tabs .tab-content ul li {
+  font-size: 18px;
 }
 /* vendor integration */
 
